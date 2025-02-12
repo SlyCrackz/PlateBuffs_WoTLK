@@ -202,6 +202,7 @@ local function iconOnShow(self)
 		self.cdtexture:Show()
 		if P.legacyCooldownTexture and self.cdtexture.SetCooldown then
 			self.cdtexture:SetCooldown(self.startTime or GetTime(), self.duration)
+			self.cdtexture:SetAlpha(0)
 		end
 	else
 		self.cdtexture:Hide()
